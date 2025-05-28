@@ -5,9 +5,10 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Kevin Ybarra - Fullstack Developer</title>
 	</head>
-	<body>
+	<body class="p-6 flex">
+		<img id="background" alt="" fetchpriority="high" />
 		<slot />
 	</body>
 </html>
@@ -18,5 +19,15 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background-color: rgb(17, 17, 17);
 	}
 </style>
