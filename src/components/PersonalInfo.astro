@@ -5,7 +5,7 @@ import githubIcon from "../assets/github-mark-white.svg";
 import pdfUrl from "../assets/cv.pdf";
 ---
 
-<header class="main-info-section w-1/2 mx-24 py-24 flex flex-col justify-between">
+<header class="main-info-section sticky w-[45%] max-h-screen py-24 flex flex-col justify-between">
   <div class="personal-info flex flex-col gap-3">
     <h1 class="name text-6xl font-black tracking-tight text-slate-200">
       Kevin Ybarra
@@ -13,11 +13,24 @@ import pdfUrl from "../assets/cv.pdf";
     <h2 class="position text-2xl font-semibold tracking-tight text-slate-200">
       Fullstack Developer
     </h2>
-    <p class="subtitle leading-normal text-slate-500">
-      Building amazing digital experiences for the web
+    <p class="subtitle leading-normal text-subtitle">
+      Building amazing digital experiences for the web with 5+ years of experience in agile environments.
     </p>
+    <nav>
+      <ul class="flex flex-col text-slate-200 mt-10 gap-4 tracking-widest">
+        <li class="relative origin-left transition-all duration-500 ease-in-out ">
+          <a class="nav-link relative pb-1 after:content-[''] after:absolute after:top-full after:left-0 after:w-full after:h-0.5 after:bg-amber-200 after:scale-x-0 after:origin-[0%] after:transition-all after:duration-500 after:ease-in-out hover:after:scale-x-100" href="#technical-skills">SKILLS</a>
+        </li>
+        <li class="origin-left transition-all duration-300 ease-in-out">
+          <a class="nav-link relative pb-1 after:content-[''] after:absolute after:top-full after:left-0 after:w-full after:h-0.5 after:bg-amber-200 after:scale-x-0 after:origin-[0%] after:transition-all after:duration-500 after:ease-in-out hover:after:scale-x-100" href="#experience">EXPERIENCE</a>
+        </li>
+        <li class="origin-left transition-all duration-300 ease-in-out">
+          <a class="nav-link relative pb-1 after:content-[''] after:absolute after:top-full after:left-0 after:w-full after:h-0.5 after:bg-amber-200 after:scale-x-0 after:origin-[0%] after:transition-all after:duration-500 after:ease-in-out hover:after:scale-x-100" href="#projects">PROJETS</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <ul class="flex w-full gap-7">
+  <ul class="flex justify-start w-full gap-7">
     <li class="link">
       <a href="https://github.com/kevinlink123"
         ><span class="sr-only">Github</span><svg
@@ -79,5 +92,6 @@ import pdfUrl from "../assets/cv.pdf";
 		</p>
 	</a> -->
 
-<style>
-</style>
+  <style>
+
+  </style>

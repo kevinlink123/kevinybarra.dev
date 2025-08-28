@@ -7,21 +7,14 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Kevin Ybarra - Fullstack Developer</title>
 	</head>
-	<body class="p-6 flex">
+	<body class="mx-auto flex justify-end h-screen max-w-screen-xl">
 		<img id="background" alt="" fetchpriority="high" />
 		<slot />
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	#background {
+	html, #background {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -29,5 +22,6 @@
 		height: 100%;
 		z-index: -1;
 		background-color: rgb(17, 17, 17);
+		scroll-behavior: smooth;
 	}
 </style>

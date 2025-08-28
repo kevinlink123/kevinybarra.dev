@@ -1,0 +1,12 @@
+---
+import workExperienceJSON from '../../data/workExperience.json';
+import WorkExperienceContainer from '../WorkExperienceContainer.astro';
+---
+
+<section id="experience" class="section mb-24">
+    <ol class="w-full">
+      {
+        workExperienceJSON.map((workExperience) => <WorkExperienceContainer workDates={workExperience.workDates} jobTitle={workExperience.jobTitle} companyName={workExperience.companyName} jobBulletPoints={workExperience.jobDescriptions} website={workExperience.website} />)
+      }
+    </ol>
+</section>

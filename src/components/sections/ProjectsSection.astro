@@ -1,0 +1,26 @@
+---
+import projectsJSON from '../../data/projects.json'
+import ProjectContainer from '../ProjectContainer.astro';
+
+const thumbnails = await import.meta.glob('../../assets/thumbnails/projects/*.{jpg,png,webp}', {
+  eager: true,
+  query: '?url',
+  import: 'default'
+});
+
+const projectsWithThumbnails = projectsJSON.map((project) => {
+  const thumbnailPath = `../../assets/thumbnails/projects/${project.thumbnailImageName}`;
+  return {
+    ...project,
+    thumbnailUrl: String(thumbnails[thumbnailPath])
+  }
+});
+---
+
+<section id="projects" class="section mb-24">
+    <ul>
+      {
+        projectsWithThumbnails.map(project => <ProjectContainer title={project.title} description={project.description} link={project.link} technologies={project.technologies} thumbnail={project.thumbnailUrl} />)
+      }
+    </ul>
+</section>

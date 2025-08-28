@@ -1,0 +1,26 @@
+---
+import nextJSIcon from '../../assets/icons/nextjs-icon.svg';
+import reactIcon from '../../assets/icons/react-icon.svg';
+import htmlIcon from '../../assets/icons/html5-icon.svg';
+import typescriptIcon from '../../assets/icons/typescript-icon.svg';
+
+import nodeJSIcon from '../../assets/icons/nodejs-icon.svg';
+import expressIcon from '../../assets/icons/express-icon.svg';
+import nestJSIcon from '../../assets/icons/nestjs-icon.svg';
+import firebaseIcon from '../../assets/icons/firebase-icon.svg';
+
+import webdriverIOIcon from '../../assets/icons/webdriver-icon.svg';
+
+import postgreSQLIcon from '../../assets/icons/postgresql-icon.svg';
+import mariaDBIcon from '../../assets/icons/mariadb-icon.svg';
+import firestoreIcon from '../../assets/icons/firestore-icon.svg';
+
+import IconsContainer from "../IconsContainer.astro";
+---
+
+<section id="technical-skills" class="section flex flex-col mb-24 gap-10">
+    <IconsContainer title="Frontend" icons={[{src: nextJSIcon.src, tooltip: "NextJS"}, {src: reactIcon.src, tooltip: "ReactJS"}, {src: htmlIcon.src, tooltip: "HTML5"}, {src: typescriptIcon.src, tooltip: "Typescript"}]}/>
+    <IconsContainer title="Backend" icons={[{src: nodeJSIcon.src, tooltip: "NodeJS"}, {src: expressIcon.src, tooltip: "Express"}, {src: nestJSIcon.src, tooltip: "NestJS"}, {src: firebaseIcon.src, tooltip: "Firebase"}]}/>
+    <IconsContainer title="QA Automation" icons={[{src: webdriverIOIcon.src, tooltip: "WebdriverIO"}, {src: typescriptIcon.src, tooltip: "Typescript"}]}/>
+    <IconsContainer title="Databases" icons={[{src: postgreSQLIcon.src, tooltip: "PostgreSQL"}, {src: mariaDBIcon.src, tooltip: "MariaDB"}, {src: firestoreIcon.src, tooltip: "Firestore"}]}/>
+</section>

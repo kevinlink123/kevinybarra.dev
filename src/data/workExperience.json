@@ -1,0 +1,45 @@
+[
+    {
+        "workDates": {
+            "from": "Nov 2024",
+            "to": "Present"
+        },
+        "jobTitle": "Shopify Dev",
+        "companyName": "Romezis",
+        "jobDescriptions": [
+            "Developed custom Shopify themes using Liquid and React.js.",
+            "Improved accessibility compliance by implementing ADA standards.",
+            "Maintained and scaled e-commerce platform features."
+        ],
+        "website": "https://romezis.com/"
+    },
+    {
+        "workDates": {
+            "from": "Jan 2022",
+            "to": "Aug 2023"
+        },
+        "jobTitle": "QA Automation Engineer",
+        "companyName": "Kin + Carta",
+        "jobDescriptions": [
+            "Automated tests for a Flutter mobile app using WebdriverIO (TypeScript).",
+            "Integrated test suites into CI/CD pipeline (Azure DevOps).",
+            "Executed manual test cases and reported defects."
+        ],
+        "website": "https://www.kinandcarta.com/"
+    },
+    {
+        "workDates": {
+            "from": "Nov 2019",
+            "to": "Aug 2021"
+        },
+        "jobTitle": "Backend Developer (Intern → Jr)",
+        "companyName": "GM2",
+        "jobDescriptions": [
+            "Promoted to Junior Backend Developer after 6 months for outstanding performance.",
+            "Developed REST APIs with Express.js and NestJS.",
+            "Managed PostgreSQL/MariaDB databases and deployed to AWS.",
+            "Trained in Agile/SCRUM and Git version control."
+        ],
+        "website": "https://www.gm2dev.com/"
+    }
+]

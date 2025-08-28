@@ -1,0 +1,25 @@
+---
+interface Props {
+    workDates: {
+        from: string;
+        to: string;
+    };
+    jobTitle: string;
+    companyName: string;
+    jobBulletPoints: string[];
+    website: string;
+}
+
+const { workDates, jobTitle, companyName, jobBulletPoints, website } = Astro.props;
+---
+<li class="mb-10 p-6 rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:bg-amber-50/10">
+    <a class="flex" rel="noopener noreferer" target="_blank" href={website ? website : "#"}>
+        <h3 class="mr-14 text-nowrap text-subtitle">{workDates.from} - {workDates.to}</h3>
+        <div class="work-experience-content">
+            <h2 class="font-black text-lg tracking-wide mb-4">{jobTitle} · {companyName}</h2>
+            <ul class="mb-1 text-gray-500">
+                {jobBulletPoints.map((bullet) => <li class="text-wrap"><span class="inline-block h-2 w-2 rounded-full mx-2 bg-gray-400"></span>{bullet}</li>)}
+            </ul>
+        </div>
+    </a>
+</li>

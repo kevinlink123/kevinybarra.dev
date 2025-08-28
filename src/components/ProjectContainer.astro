@@ -1,0 +1,25 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    link: string;
+    technologies: string[];
+    thumbnail: string;
+}
+
+const { title, description, link, technologies, thumbnail } = Astro.props;
+console.log(thumbnail);
+---
+<li class="mb-10 p-6 rounded-lg cursor-pointer transition duration-200 ease-in-out hover:bg-amber-50/10">
+    <a class="flex items-center">
+        <div class="project-thumbnail mr-14">
+            <img src={thumbnail} />
+        </div>
+        <div class="project-description">
+            <h2 class="project-title font-black text-lg tracking-wide mb-4">{title}</h2>
+            <p class="project-description mb-1 text-gray-500">
+                {description}
+            </p>
+        </div>
+    </a>
+</li>

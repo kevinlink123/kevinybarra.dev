@@ -1,6 +1,12 @@
 ---
-
+import SkillsSection from "./sections/SkillsSection.astro";
+import ExperienceSection from "./sections/ExperienceSection.astro";
+import ProjectsSection from "./sections/ProjectsSection.astro";
 ---
 
-<main class="w-1/2 text-slate-200">
+<main class="w-[60%] flex flex-col py-24 text-slate-200 overflow-y-auto overflow-scroll scroll-smooth no-scrollbar">
+  <SkillsSection />
+  <ExperienceSection />
+  <ProjectsSection />
+  <footer class=""></footer>
 </main>

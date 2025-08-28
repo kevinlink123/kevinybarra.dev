@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import PersonalInfo from '../components/PersonalInfo.astro';
 import Sections from "../components/Sections.astro";
 
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -12,3 +13,36 @@ import Sections from "../components/Sections.astro";
 	<PersonalInfo />
 	<Sections />
 </Layout>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const observerOptions = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 0.5
+		}
+
+		const sections = document.querySelectorAll("section");
+		const navLinks = document.querySelectorAll(".nav-link")
+		const activeLinkClassList = ["after:scale-x-100"];
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					navLinks.forEach(link => {
+						if (link) {
+							link.classList.remove(...activeLinkClassList);
+						}
+					});
+
+					const id = entry.target.getAttribute('id');
+					const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+
+					if (activeLink) activeLink.classList.add(...activeLinkClassList)
+				}
+			});
+		}, observerOptions);
+
+		sections.forEach(section => observer.observe(section));
+	});
+</script>
