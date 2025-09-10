@@ -17,10 +17,11 @@ const projectsWithThumbnails = projectsJSON.map((project) => {
 });
 ---
 
-<section id="projects" class="section mb-24">
-    <ul>
-      {
-        projectsWithThumbnails.map(project => <ProjectContainer title={project.title} description={project.description} link={project.link} technologies={project.technologies} thumbnail={project.thumbnailUrl} />)
-      }
-    </ul>
+<section id="projects" class="section mb-24 overflow-visible">
+  <h1 class="lg:hidden block mb-12 text-xl font-bold underline underline-offset-8">PROJECTS</h1>
+  <ul>
+    {
+      projectsWithThumbnails.map(project => <ProjectContainer title={project.title} description={project.description} link={project.link} technologies={project.technologies} thumbnail={project.thumbnailUrl} />)
+    }
+  </ul>
 </section>

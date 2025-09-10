@@ -5,7 +5,7 @@ import githubIcon from "../assets/github-mark-white.svg";
 import pdfUrl from "../assets/cv.pdf";
 ---
 
-<header class="main-info-section sticky w-[45%] max-h-screen py-24 flex flex-col justify-between">
+<header class="main-info-section lg:sticky lg:w-[45%] w-full lg:max-h-screen min-h-screen py-24 px-6 flex flex-col justify-between">
   <div class="personal-info flex flex-col gap-3">
     <h1 class="name text-6xl font-black tracking-tight text-slate-200">
       Kevin Ybarra
@@ -31,7 +31,7 @@ import pdfUrl from "../assets/cv.pdf";
     </nav>
   </div>
   <ul class="flex justify-start w-full gap-7">
-    <li class="link">
+    <li class="link transition-all duration-100 hover:scale-125">
       <a href="https://github.com/kevinlink123"
         ><span class="sr-only">Github</span><svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ import pdfUrl from "../assets/cv.pdf";
           ></path></svg
         ></a>
     </li>
-    <li class="link">
+    <li class="link transition-all duration-100 hover:scale-125">
       <a href="https://www.linkedin.com/in/kevin-ybarra-14b773207/"
         ><span class="sr-only">Linkedin</span><svg
           xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ import pdfUrl from "../assets/cv.pdf";
           ></path></svg
         ></a>
     </li>
-    <li class="link">
+    <li class="link transition-all duration-100 hover:scale-125">
       <a href={pdfUrl} download="CV - Kevin Ybarra.pdf"
         ><span class="sr-only">Download CV</span><svg
           xmlns="http://www.w3.org/2000/svg"

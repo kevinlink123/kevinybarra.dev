@@ -10,16 +10,21 @@ interface Props {
 const { title, description, link, technologies, thumbnail } = Astro.props;
 console.log(thumbnail);
 ---
-<li class="mb-10 p-6 rounded-lg cursor-pointer transition duration-200 ease-in-out hover:bg-amber-50/10">
-    <a class="flex items-center">
-        <div class="project-thumbnail mr-14">
+<li class="relative lg:overflow-hidden overflow-visible mb-10 p-4 rounded-lg cursor-pointer transition duration-200 ease-in-out lg:bg-inherit bg-slate-400/10 hover:bg-slate-400/10 hover:shadow-2xl lg:shadow-none shadow-xl before:content-[''] before:absolute before:pointer-events-none before:-top-1/2 before:-left-1/2 before:w-[200%] before:h-[200%] before:bg-[linear-gradient(0deg,transparent,transparent_30%,rgba(0,255,255,0.3))] before:rotate-45 before:transition-all before:duration-1000 before:opacity-0 hover:before:opacity-100 hover:before:translate-y-[200%]">
+    <a class="flex lg:flex-row flex-col justify-center items-center" rel="noopener noreferer" target="_blank" href={link ? link : "#"}>
+        <div class="project-thumbnail lg:mr-14 mb-4">
             <img src={thumbnail} />
         </div>
         <div class="project-description">
-            <h2 class="project-title font-black text-lg tracking-wide mb-4">{title}</h2>
+            <h2 class="project-title font-black text-lg tracking-wide">{title}</h2>
             <p class="project-description mb-1 text-gray-500">
                 {description}
             </p>
+        </div>
+        <div class="absolute lg:hidden block bottom-0 right-0 bg-slate-600 p-1.5 rounded-full translate-1/2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>              
         </div>
     </a>
 </li>

@@ -12,11 +12,11 @@ interface Props {
 
 const { workDates, jobTitle, companyName, jobBulletPoints, website } = Astro.props;
 ---
-<li class="mb-10 p-6 rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:bg-amber-50/10">
-    <a class="flex" rel="noopener noreferer" target="_blank" href={website ? website : "#"}>
-        <h3 class="mr-14 text-nowrap text-subtitle">{workDates.from} - {workDates.to}</h3>
+<li class="mb-20 p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out lg:bg-inherit bg-slate-400/10 hover:bg-slate-400/10 hover:shadow-2xl lg:shadow-none shadow-xl relative overflow-hidden before:content-[''] before:absolute before:pointer-events-none before:-top-1/2 before:-left-1/2 before:w-[200%] before:h-[200%] before:bg-[linear-gradient(0deg,transparent,transparent_30%,rgba(0,255,255,0.3))] before:rotate-45 before:transition-all before:duration-1000 before:opacity-0 hover:before:opacity-100 hover:before:translate-y-[200%]">
+    <a class="lg:flex block" rel="noopener noreferer" target="_blank" href={website ? website : "#"}>
+        <h3 class="lg:mr-14 mr-0 text-nowrap text-subtitle">{workDates.from} - {workDates.to}</h3>
         <div class="work-experience-content">
-            <h2 class="font-black text-lg tracking-wide mb-4">{jobTitle} · {companyName}</h2>
+            <h2 class="font-black text-lg tracking-wide lg:mb-4 mb-10">{jobTitle} · {companyName}</h2>
             <ul class="mb-1 text-gray-500">
                 {jobBulletPoints.map((bullet) => <li class="text-wrap"><span class="inline-block h-2 w-2 rounded-full mx-2 bg-gray-400"></span>{bullet}</li>)}
             </ul>
